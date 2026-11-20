@@ -1,0 +1,56 @@
+/* Identidade visual DIWB (tokens extraídos de https://diwb.com.br) */
+:root {
+  --teal-300: #5eead4; --teal-400: #2dd4bf; --teal-600: #0d9488; --indigo-400: #818cf8;
+  --bg-950: #05070a; --bg-900: #0a0e13; --bg-800: #10161d;
+  --surface: rgba(255, 255, 255, .045); --border: rgba(255, 255, 255, .09); --border-strong: rgba(255, 255, 255, .16);
+  --text-primary: #f4f7f8; --text-secondary: #9aa7b0; --text-muted: #6b7680;
+  --font-head: "Space Grotesk", "Inter", sans-serif; --font-body: "Inter", sans-serif;
+  --container: 1180px; --radius: 18px;
+}
+* { box-sizing: border-box; }
+html { color-scheme: dark; }
+body {
+  margin: 0; min-height: 100vh; display: flex; flex-direction: column;
+  background: radial-gradient(900px 500px at 85% -10%, rgba(45, 212, 191, .14), transparent 60%),
+              radial-gradient(700px 400px at -10% 10%, rgba(129, 140, 248, .10), transparent 60%),
+              var(--bg-950);
+  color: var(--text-primary); font-family: var(--font-body); font-size: 16px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.container { width: 100%; max-width: var(--container); margin: 0 auto; padding: 0 16px; }
+a { color: var(--teal-300); }
+a:hover { color: var(--teal-400); }
+
+.header { padding: 1.1rem 0; border-bottom: 1px solid var(--border); background: rgba(5, 7, 10, .75); backdrop-filter: blur(14px); }
+.header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--text-primary); }
+.brand__logo { height: 36px; width: auto; }
+.brand__name { font-family: var(--font-head); font-weight: 700; font-size: 1.25rem; letter-spacing: .02em; }
+.nav { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+.nav a { color: var(--text-secondary); text-decoration: none; font-weight: 500; font-size: .95rem; }
+.nav a:hover { color: var(--teal-300); }
+
+main { flex: 1; padding: 64px 0; }
+.eyebrow { font-family: var(--font-head); font-size: .8rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-400); margin: 0 0 .8rem; }
+h1 { font-family: var(--font-head); font-weight: 700; font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.1; margin: 0 0 1.2rem; }
+h1 .accent { background: linear-gradient(135deg, var(--teal-300), var(--indigo-400)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h2 { font-family: var(--font-head); font-weight: 600; font-size: 1.25rem; margin: 2rem 0 .5rem; color: var(--text-primary); }
+p, li { color: var(--text-secondary); }
+.lead { font-size: 1.15rem; max-width: 640px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.6rem; margin-top: 1.5rem; max-width: 760px; }
+.card p:first-child { margin-top: 0; } .card p:last-child { margin-bottom: 0; }
+code { background: var(--bg-800); border: 1px solid var(--border); border-radius: 6px; padding: .1rem .4rem; color: var(--teal-300); font-size: .9em; }
+.btn { display: inline-block; margin-top: 1.4rem; padding: .8rem 1.4rem; border-radius: 999px; font-weight: 600; text-decoration: none; }
+.btn--primary { background: linear-gradient(135deg, var(--teal-400), var(--teal-600)); color: #04211d; box-shadow: 0 8px 24px -8px rgba(45, 212, 191, .55); }
+.btn--primary:hover { color: #04211d; box-shadow: 0 12px 30px -8px rgba(45, 212, 191, .7); }
+.btn--ghost { border: 1px solid var(--border-strong); color: var(--text-primary); margin-left: .6rem; }
+.btn--ghost:hover { border-color: var(--teal-400); color: var(--teal-300); }
+.meta { color: var(--text-muted); font-size: .9rem; }
+
+.footer { border-top: 1px solid var(--border); padding: 2rem 0; text-align: center; }
+.footer .brand { justify-content: center; }
+.footer__tagline { margin: .6rem 0; color: var(--text-secondary); }
+.footer__nav { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; margin: .8rem 0; }
+.footer__nav a { color: var(--text-secondary); text-decoration: none; }
+.footer__nav a:hover { color: var(--teal-300); }
+.footer__copy { color: var(--text-muted); font-size: .85rem; margin: 0; }
